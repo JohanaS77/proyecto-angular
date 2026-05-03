@@ -1,0 +1,254 @@
+.navbar {
+  grid-row: 1; /* Se posiciona en la primera fila de nuestro grid */
+  z-index: 10; /* Se asegura de que esté por encima de otros elementos */
+  background: white;
+  padding: 0.4rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: relative;
+  min-height: 60px; /* Altura mínima para el cálculo del layout flex */
+}
+
+/* LOGO */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* MENÚ ESCRITORIO */
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar-menu a {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-menu a:hover {
+  color: #667eea;
+}
+
+/* DERECHA */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-self: end;
+}
+
+/* USUARIO */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-user span {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.navbar-user button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar-user button:hover {
+  opacity: 0.85;
+}
+
+/* REDES */
+.navbar-social {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.navbar-social img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter:  grayscale(100%) opacity(0.7);
+}
+
+.navbar-social a:hover img {
+  transform: scale(1.2);
+  filter: none;
+}
+
+.navbar-social a:hover {
+  transform: scale(1.2);
+}
+
+/* HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* CONTROL VISIBILIDAD */
+.desktop-menu {
+  display: flex;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/*  RESPONSIVE */
+@media (max-width: 768px) {
+
+  /* Ocultar escritorio */
+  .desktop-menu {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  /* MENÚ MÓVIL */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 220px;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    gap: 10px;
+    z-index: 10;
+  }
+}
+/* BOTONES NAVBAR */
+.navbar-user a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar-saludo {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.btn-bienvenida {
+  background: white;
+  border: 2px solid #667eea; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(135deg, #667eea, #764ba2);
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-bienvenida:hover {
+  transform: scale(1.05);
+}
+
+.navbar-user a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+/* Hover */
+.navbar-user a:hover {
+  transform: scale(1.05);
+}
+/*  LINKS DEL MENÚ MÓVIL */
+.mobile-menu a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.2s;
+  color: #333;
+}
+
+/* Iniciar sesión (outline) */
+.mobile-menu a[href="/login"] {
+  border: 1px solid #667eea;
+  color: #667eea;
+}
+
+/* Registrarse (principal) */
+.mobile-menu a[href="/registro"] {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* Hover */
+.mobile-menu a:hover {
+  transform: scale(1.05);
+}
+.navbar-user a,
+.mobile-menu a {
+  cursor: pointer; /* fuerza la manito */
+}
+.tiktok-icon {
+  width: 35px !important;
+  height: 35px !important;
+  margin-left: -10px;
+}

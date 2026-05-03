@@ -1,0 +1,52 @@
+<section class="carrito-container" [class.visible]="carrito.visible()">
+    <div class="carrito-header">
+      <h3>Mi Carrito</h3>
+      <button class="cerrar-btn" (click)="carrito.cerrarCarrito()">X</button>
+    </div>
+  
+    @if (carrito.items().length === 0) {
+      <div class="carrito-vacio">
+        <p>Aún no tienes productos en tu carrito.</p>
+      </div>
+    } @else {
+      <div class="carrito-items">
+        @for (item of carrito.items(); track item.producto.id) {
+          <div class="carrito-item">
+            <img [src]="item.producto.image" [alt]="item.producto.title" class="carrito-item-img">
+            <div class="item-info">
+              <p>{{ item.producto.title }}</p>
+              <div class="item-cantidad">
+                <button (click)="carrito.disminuirCantidad(item.producto.id)">-</button>
+                <span>{{ item.cantidad }}</span>
+                <button (click)="carrito.aumentarCantidad(item.producto.id)">+</button>
+              </div>
+            </div>
+            <span class="item-precio">${{ item.producto.price | number }}</span>
+          </div>
+        }
+      </div>
+    }
+  
+    <!-- ESTO SIEMPRE VISIBLE -->
+    <div class="carrito-total">
+      <div class="total-texto">
+        <span>Total:</span>
+        <span class="total-precio">${{ carrito.total() | number }}</span>
+      </div>
+      <button class="btn-comprar" (click)="comprar()">Comprar Ahora</button>
+      <button class="btn-vaciar" (click)="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  @if (modalVisible()) {
+    <div class="modal-overlay" (click)="cerrarModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <img src="/imagenes/logo.png" alt="Logo" style="height: 80px; margin-bottom: 1rem;">
+        <h3 class="mensaje-exito">¡Compra realizada con éxito!</h3>
+        <p>Su pedido se encuentra en camino. Recibirá un correo de confirmación en breve.</p>
+        <button class="btn-cerrar-modal" (click)="cerrarModal()">Aceptar</button>
+      </div>
+    </div>
+  }
+  
