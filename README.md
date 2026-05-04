@@ -2,198 +2,198 @@
 
 <img src="public/imagenes/logo.png" alt="QuickShop Logo" width="180"/>
 
-**Aplicación web de comercio electrónico desarrollada con Angular 21 y Bootstrap 5**
+**E-commerce web application built with Angular 21 and Bootstrap 5**
 
 [![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![GitHub](https://img.shields.io/badge/Repositorio-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohanaS77/proyecto-angular)
+[![GitHub](https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohanaS77/proyecto-angular)
 
 </div>
 
 ---
 
-## 📑 Índice
+## 📑 Table of Contents
 
-- [Descripción](#-descripción)
-- [Capturas de Pantalla](#-capturas-de-pantalla)
-- [Características Principales](#-características-principales)
-- [Tecnologías Utilizadas](#️-tecnologías-utilizadas)
-- [Arquitectura y Componentes](#-arquitectura-y-componentes)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Instalación y Uso](#️-instalación-y-uso)
-- [Funcionalidades Técnicas Clave](#-funcionalidades-técnicas-clave)
-- [Mejoras Futuras](#-mejoras-futuras)
-- [Desarrolladores](#-desarrolladores)
-- [Licencia](#-licencia)
-
----
-
-## 📖 Descripción
-
-QuickShop es una aplicación web de comercio electrónico moderna y responsive que simula una tienda virtual completa. Permite a los usuarios explorar un catálogo de productos organizado por categorías, gestionar un carrito de compras persistente y autenticarse en la plataforma.
-
-El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Software Web Front-End** del programa **Tecnología en Desarrollo de Aplicaciones Web y Móviles** de la Fundación Universitaria Compensar, aplicando los fundamentos de Angular y Bootstrap vistos durante el curso. Se utilizaron las características más modernas de Angular 21, incluyendo componentes standalone, Signals para el manejo de estado reactivo y una arquitectura limpia orientada a la escalabilidad.
-
-[⬆️ Volver al índice](#-índice)
+- [Description](#-description)
+- [Screenshots](#-screenshots)
+- [Main Features](#-main-features)
+- [Technologies Used](#️-technologies-used)
+- [Architecture and Components](#-architecture-and-components)
+- [Project Structure](#-project-structure)
+- [Installation and Usage](#️-installation-and-usage)
+- [Key Technical Features](#-key-technical-features)
+- [Future Improvements](#-future-improvements)
+- [Developers](#-developers)
+- [License](#-license)
 
 ---
 
-## 📸 Capturas de Pantalla
+## 📖 Description
+
+QuickShop is a modern, responsive e-commerce web application that simulates a complete virtual store. It allows users to browse a product catalog organized by categories, manage a persistent shopping cart, and authenticate on the platform.
+
+The project was developed as part of the **Web Front-End Software Development** course in the **Web and Mobile Application Development Technology** program at Fundación Universitaria Compensar, applying Angular and Bootstrap fundamentals covered throughout the course. The most modern features of Angular 21 were used, including standalone components, Signals for reactive state management, and a clean architecture oriented toward scalability.
+
+[⬆️ Back to top](#-table-of-contents)
+
+---
+
+## 📸 Screenshots
 
 ### 🏡 Home
 <div align="center">
-  <img src="images/home.png" alt="Página Principal" width="800"/>
+  <img src="images/home.png" alt="Home Page" width="800"/>
 </div>
 
-### 🔐 Iniciar Sesión
+### 🔐 Login
 <div align="center">
-  <img src="images/iniciar-sesion.png" alt="Iniciar Sesión" width="800"/>
+  <img src="images/iniciar-sesion.png" alt="Login" width="800"/>
 </div>
 
-### 📝 Registro
+### 📝 Register
 <div align="center">
-  <img src="images/registro.png" alt="Registro de Usuario" width="800"/>
+  <img src="images/registro.png" alt="User Registration" width="800"/>
 </div>
 
-### 🏠 Bienvenida
+### 🏠 Welcome
 <div align="center">
-  <img src="images/bienvenida.png" alt="Pantalla de Bienvenida" width="800"/>
+  <img src="images/bienvenida.png" alt="Welcome Screen" width="800"/>
 </div>
 
-### 🛍️ Catálogo de Productos
+### 🛍️ Product Catalog
 <div align="center">
-  <img src="images/catalogo.png" alt="Catálogo" width="800"/>
+  <img src="images/catalogo.png" alt="Catalog" width="800"/>
 </div>
 
-### 🛒 Compra Exitosa
+### 🛒 Successful Purchase
 <div align="center">
-  <img src="images/compra-exitosa.png" alt="Compra Exitosa" width="800"/>
+  <img src="images/compra-exitosa.png" alt="Successful Purchase" width="800"/>
 </div>
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 🚀 Características Principales
+## 🚀 Main Features
 
-### 🔐 Autenticación de Usuarios
-- Inicio de sesión con validación de formularios
-- Persistencia de sesión mediante `localStorage`
-- Control de acceso a la aplicación
-- Servicio de autenticación (`AuthService`) inyectable en toda la app
+### 🔐 User Authentication
+- Login with form validation
+- Session persistence via `localStorage`
+- Application access control
+- Injectable `AuthService` available throughout the app
 
-### 🛍️ Catálogo de Productos
-- Visualización de productos en tarjetas responsive
-- Filtrado por categorías: Hombre, Mujer, Joyería, Electrónica
-- Carga dinámica de productos mediante servicio
-- Diseño limpio con Bootstrap
+### 🛍️ Product Catalog
+- Product display in responsive cards
+- Filtering by category: Men, Women, Jewelry, Electronics
+- Dynamic product loading via service
+- Clean design with Bootstrap
 
-### 🛒 Carrito de Compras
-- Agregar y eliminar productos
-- Control de cantidades por ítem (aumentar / disminuir)
-- Cálculo automático del total en tiempo real
-- Persistencia del carrito con `localStorage`
-- Panel deslizable con visibilidad controlada por Signals
+### 🛒 Shopping Cart
+- Add and remove products
+- Quantity control per item (increase / decrease)
+- Automatic real-time total calculation
+- Cart persistence with `localStorage`
+- Sliding panel with visibility controlled by Signals
 
-### 🎨 Diseño y Experiencia de Usuario
-- Interfaz moderna, amigable y responsive
-- Compatible con móvil, tablet y desktop
-- Componentes reutilizables y modulares
-- Navbar dinámico con contador de ítems del carrito
+### 🎨 Design and User Experience
+- Modern, user-friendly, and responsive interface
+- Compatible with mobile, tablet, and desktop
+- Reusable and modular components
+- Dynamic navbar with cart item counter
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 <div align="center">
 
-| Tecnología | Versión | Uso |
+| Technology | Version | Usage |
 |---|---|---|
-| Angular | 21 | Framework principal |
-| TypeScript | 5 | Lenguaje de programación |
-| Bootstrap | 5 | Estilos y maquetación responsive |
-| HTML5 | — | Estructura de vistas |
-| CSS3 | — | Estilos personalizados |
-| Angular Signals | built-in | Manejo de estado reactivo |
-| LocalStorage API | built-in | Persistencia de datos |
+| Angular | 21 | Main framework |
+| TypeScript | 5 | Programming language |
+| Bootstrap | 5 | Responsive styling and layout |
+| HTML5 | — | View structure |
+| CSS3 | — | Custom styles |
+| Angular Signals | built-in | Reactive state management |
+| LocalStorage API | built-in | Data persistence |
 
 </div>
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 🧩 Arquitectura y Componentes
+## 🧩 Architecture and Components
 
-El proyecto supera el requerimiento académico mínimo de 4 componentes, implementando una arquitectura modular y escalable con **9 componentes standalone**.
+The project exceeds the minimum academic requirement of 4 components, implementing a modular and scalable architecture with **9 standalone components**.
 
-### Componentes (`/components`)
-
-<div align="center">
-
-| Componente | Descripción |
-|---|---|
-| `NavbarComponent` | Navegación principal con contador de carrito en tiempo real |
-| `LoginComponent` | Formulario de registro e inicio de sesión con validación |
-| `IniciarSesionComponent` | Vista de autenticación de usuarios existentes |
-| `CatalogoComponent` | Grilla de productos con filtrado por categoría |
-| `CarritoComponent` | Panel lateral del carrito con control de cantidades |
-
-</div>
-
-### Páginas (`/pages`)
+### Components (`/components`)
 
 <div align="center">
 
-| Página | Descripción |
+| Component | Description |
 |---|---|
-| `HomeComponent` | Página principal con acceso al catálogo por categoría |
-| `BienvenidaComponent` | Pantalla de entrada a la aplicación |
-| `RegistroComponent` | Vista de creación de cuenta |
-| `ServicioComponent` | Vista adicional de servicios |
+| `NavbarComponent` | Main navigation with real-time cart counter |
+| `LoginComponent` | Registration and login form with validation |
+| `IniciarSesionComponent` | Authentication view for existing users |
+| `CatalogoComponent` | Product grid with category filtering |
+| `CarritoComponent` | Sidebar cart panel with quantity control |
 
 </div>
 
-### Compartidos (`/shared`)
+### Pages (`/pages`)
 
 <div align="center">
 
-| Elemento | Descripción |
+| Page | Description |
 |---|---|
-| `FooterComponent` | Pie de página reutilizable en toda la app |
+| `HomeComponent` | Main page with category-based catalog access |
+| `BienvenidaComponent` | Application entry screen |
+| `RegistroComponent` | Account creation view |
+| `ServicioComponent` | Additional services view |
 
 </div>
 
-### Servicios (`/services`)
+### Shared (`/shared`)
 
 <div align="center">
 
-| Servicio | Descripción |
+| Element | Description |
 |---|---|
-| `AuthService` | Gestión de sesión, login y logout |
-| `CarritoService` | Estado reactivo del carrito con Signals |
-| `ProductoService` | Carga y filtrado del catálogo de productos |
+| `FooterComponent` | Reusable footer across the entire app |
 
 </div>
 
-### Modelos (`/models`)
+### Services (`/services`)
 
 <div align="center">
 
-| Modelo | Descripción |
+| Service | Description |
 |---|---|
-| `Producto` | Interfaz TypeScript para tipado de productos |
+| `AuthService` | Session management, login and logout |
+| `CarritoService` | Reactive cart state with Signals |
+| `ProductoService` | Product catalog loading and filtering |
 
 </div>
 
-[⬆️ Volver al índice](#-índice)
+### Models (`/models`)
+
+<div align="center">
+
+| Model | Description |
+|---|---|
+| `Producto` | TypeScript interface for product typing |
+
+</div>
+
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```
 proyecto-angular/
@@ -229,79 +229,79 @@ proyecto-angular/
     └── imagenes/
 ```
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## ⚙️ Instalación y Uso
+## ⚙️ Installation and Usage
 
-### Requisitos previos
-- Node.js (versión 18 o superior)
-- Angular CLI instalado globalmente
+### Prerequisites
+- Node.js (version 18 or higher)
+- Angular CLI installed globally
 
 ```bash
 npm install -g @angular/cli
 ```
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/JohanaS77/proyecto-angular.git
 cd proyecto-angular
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Ejecutar la aplicación
+### 3. Run the application
 
 ```bash
 ng serve
 ```
 
-### 4. Abrir en el navegador
+### 4. Open in the browser
 
 ```
 http://localhost:4200/
 ```
 
-> La aplicación se recargará automáticamente al detectar cambios en los archivos fuente.
+> The application will reload automatically when changes are detected in the source files.
 
-[⬆️ Volver al índice](#-índice)
-
----
-
-## 🧠 Funcionalidades Técnicas Clave
-
-- **Signals (`signal()` y `computed()`)** — El `CarritoService` usa Signals para manejar el estado de ítems y total de forma reactiva, sin necesidad de RxJS para el estado local.
-- **Inyección de dependencias con `inject()`** — Los componentes obtienen servicios de forma limpia usando la función `inject()` en lugar del constructor tradicional.
-- **Estrategia OnPush** — Optimización del rendimiento al limitar la detección de cambios solo cuando los inputs cambian o se emiten nuevos valores reactivos.
-- **Componentes Standalone** — Todos los componentes son standalone, eliminando la necesidad de `NgModules` y facilitando la reutilización.
-- **Routing estructurado** — Navegación declarativa con `app.routes.ts` y redirección automática a la ruta principal.
-- **Persistencia con localStorage** — Tanto la sesión del usuario como el contenido del carrito se persisten entre recargas del navegador.
-
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 🔮 Mejoras Futuras
+## 🧠 Key Technical Features
 
-- [ ] Conexión a API REST real (reemplazar datos simulados)
-- [ ] Sistema de autenticación completo con JWT
-- [ ] Filtros avanzados y búsqueda de productos
-- [ ] Modo oscuro
-- [ ] Pasarela de pago simulada
-- [ ] Pruebas unitarias personalizadas
-- [ ] Historial de pedidos por usuario
+- **Signals (`signal()` and `computed()`)** — The `CarritoService` uses Signals to manage items and total state reactively, without needing RxJS for local state.
+- **Dependency injection with `inject()`** — Components obtain services cleanly using the `inject()` function instead of the traditional constructor.
+- **OnPush strategy** — Performance optimization by limiting change detection only when inputs change or new reactive values are emitted.
+- **Standalone components** — All components are standalone, eliminating the need for `NgModules` and making reuse easier.
+- **Structured routing** — Declarative navigation with `app.routes.ts` and automatic redirection to the main route.
+- **localStorage persistence** — Both the user session and the cart contents are persisted between browser reloads.
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 👩‍💻 Desarrolladores
+## 🔮 Future Improvements
+
+- [ ] Connection to a real REST API (replacing simulated data)
+- [ ] Complete authentication system with JWT
+- [ ] Advanced filters and product search
+- [ ] Dark mode
+- [ ] Simulated payment gateway
+- [ ] Custom unit tests
+- [ ] Order history per user
+
+[⬆️ Back to top](#-table-of-contents)
+
+---
+
+## 👩‍💻 Developers
 
 <div align="center">
 
@@ -310,37 +310,38 @@ http://localhost:4200/
     <td align="center">
       <img src="images/johana.png" width="120"/><br/><br/>
       <b>Johana Saavedra</b><br/>
-      Estudiante de Desarrollo de Software
+      Software Development Student
     </td>
     <td align="center">
       <img src="images/daniel.png" width="120"/><br/><br/>
       <b>Daniel Julián Laiton Muñoz</b><br/>
-      Estudiante de Desarrollo de Software
+      Software Development Student
     </td>
   </tr>
 </table>
 
 </div>
 
-Este proyecto fue desarrollado por **Johana Jazmín Saavedra Tafur** y **Daniel Julián Laiton Muñoz**, estudiantes de quinto semestre del programa **Tecnología en Desarrollo de Aplicaciones Web y Móviles** de la Fundación Universitaria Compensar.
+This project was developed by **Johana Jazmín Saavedra Tafur** and **Daniel Julián Laiton Muñoz**, fifth-semester students of the **Web and Mobile Application Development Technology** program at Fundación Universitaria Compensar.
 
-Como equipo, tuvimos una participación activa en el **diseño** e **implementación** de la aplicación web de comercio electrónico.
+As a team, we were actively involved in the **design** and **implementation** of this e-commerce web application.
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
-## 📜 Licencia
+## 📜 License
 
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+This project is open source and available under the MIT License.
 
-[⬆️ Volver al índice](#-índice)
+[⬆️ Back to top](#-table-of-contents)
 
 ---
 
 <div align="center">
 
-⭐ *Proyecto desarrollado con fines académicos*<br/>
-📚 *Asignatura: Desarrollo de Software Web Front-End — Fundación Universitaria Compensar*
+⭐ *Project developed for academic purposes*<br/>
+📚 *Course: Web Front-End Software Development — Fundación Universitaria Compensar*
 
 </div>
+
