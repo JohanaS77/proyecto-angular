@@ -2,8 +2,6 @@
 
 <img src="public/imagenes/logo.png" alt="QuickShop Logo" width="180"/>
 
-# QuickShop Angular
-
 **Aplicación web de comercio electrónico desarrollada con Angular 21 y Bootstrap 5**
 
 [![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
@@ -27,6 +25,7 @@
 - [Funcionalidades Técnicas Clave](#-funcionalidades-técnicas-clave)
 - [Mejoras Futuras](#-mejoras-futuras)
 - [Desarrolladores](#-desarrolladores)
+- [Licencia](#-licencia)
 
 ---
 
@@ -36,27 +35,43 @@ QuickShop Angular es una aplicación web de comercio electrónico moderna y resp
 
 El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Software Web Front-End** del programa de formación del SENA, aplicando los fundamentos de Angular y Bootstrap vistos durante el curso. Se utilizaron las características más modernas de Angular 21, incluyendo componentes standalone, Signals para el manejo de estado reactivo y una arquitectura limpia orientada a la escalabilidad.
 
+[⬆️ Volver al índice](#-índice)
+
 ---
 
 ## 📸 Capturas de Pantalla
 
-### 🏠 Bienvenida
-![Pantalla de Bienvenida](images/bienvenida.png)
-
 ### 🏡 Home
-![Página Principal](images/home.png)
+<div align="center">
+  <img src="images/home.png" alt="Página Principal" width="800"/>
+</div>
 
 ### 🔐 Iniciar Sesión
-![Iniciar Sesión](images/iniciar-sesion.png)
+<div align="center">
+  <img src="images/iniciar-sesion.png" alt="Iniciar Sesión" width="800"/>
+</div>
 
 ### 📝 Registro
-![Registro de Usuario](images/registro.png)
+<div align="center">
+  <img src="images/registro.png" alt="Registro de Usuario" width="800"/>
+</div>
+
+### 🏠 Bienvenida
+<div align="center">
+  <img src="images/bienvenida.png" alt="Pantalla de Bienvenida" width="800"/>
+</div>
 
 ### 🛍️ Catálogo de Productos
-![Catálogo](images/catalogo.png)
+<div align="center">
+  <img src="images/catalogo.png" alt="Catálogo" width="800"/>
+</div>
 
 ### 🛒 Compra Exitosa
-![Compra Exitosa](images/compra-exitosa.png)
+<div align="center">
+  <img src="images/compra-exitosa.png" alt="Compra Exitosa" width="800"/>
+</div>
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
@@ -87,9 +102,13 @@ El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Softwa
 - Componentes reutilizables y modulares
 - Navbar dinámico con contador de ítems del carrito
 
+[⬆️ Volver al índice](#-índice)
+
 ---
 
 ## 🛠️ Tecnologías Utilizadas
+
+<div align="center">
 
 | Tecnología | Versión | Uso |
 |---|---|---|
@@ -101,6 +120,10 @@ El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Softwa
 | Angular Signals | built-in | Manejo de estado reactivo |
 | LocalStorage API | built-in | Persistencia de datos |
 
+</div>
+
+[⬆️ Volver al índice](#-índice)
+
 ---
 
 ## 🧩 Arquitectura y Componentes
@@ -108,6 +131,8 @@ El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Softwa
 El proyecto supera el requerimiento académico mínimo de 4 componentes, implementando una arquitectura modular y escalable con **9 componentes standalone**.
 
 ### Componentes (`/components`)
+
+<div align="center">
 
 | Componente | Descripción |
 |---|---|
@@ -117,7 +142,11 @@ El proyecto supera el requerimiento académico mínimo de 4 componentes, impleme
 | `CatalogoComponent` | Grilla de productos con filtrado por categoría |
 | `CarritoComponent` | Panel lateral del carrito con control de cantidades |
 
+</div>
+
 ### Páginas (`/pages`)
+
+<div align="center">
 
 | Página | Descripción |
 |---|---|
@@ -126,13 +155,21 @@ El proyecto supera el requerimiento académico mínimo de 4 componentes, impleme
 | `RegistroComponent` | Vista de creación de cuenta |
 | `ServicioComponent` | Vista adicional de servicios |
 
+</div>
+
 ### Compartidos (`/shared`)
+
+<div align="center">
 
 | Elemento | Descripción |
 |---|---|
 | `FooterComponent` | Pie de página reutilizable en toda la app |
 
+</div>
+
 ### Servicios (`/services`)
+
+<div align="center">
 
 | Servicio | Descripción |
 |---|---|
@@ -140,11 +177,19 @@ El proyecto supera el requerimiento académico mínimo de 4 componentes, impleme
 | `CarritoService` | Estado reactivo del carrito con Signals |
 | `ProductoService` | Carga y filtrado del catálogo de productos |
 
+</div>
+
 ### Modelos (`/models`)
+
+<div align="center">
 
 | Modelo | Descripción |
 |---|---|
 | `Producto` | Interfaz TypeScript para tipado de productos |
+
+</div>
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
@@ -183,6 +228,8 @@ proyecto-angular/
 └── public/
     └── imagenes/
 ```
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
@@ -223,6 +270,8 @@ http://localhost:4200/
 
 > La aplicación se recargará automáticamente al detectar cambios en los archivos fuente.
 
+[⬆️ Volver al índice](#-índice)
+
 ---
 
 ## 🧠 Funcionalidades Técnicas Clave
@@ -233,6 +282,8 @@ http://localhost:4200/
 - **Componentes Standalone** — Todos los componentes son standalone, eliminando la necesidad de `NgModules` y facilitando la reutilización.
 - **Routing estructurado** — Navegación declarativa con `app.routes.ts` y redirección automática a la ruta principal.
 - **Persistencia con localStorage** — Tanto la sesión del usuario como el contenido del carrito se persisten entre recargas del navegador.
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
@@ -245,6 +296,8 @@ http://localhost:4200/
 - [ ] Pasarela de pago simulada
 - [ ] Pruebas unitarias personalizadas
 - [ ] Historial de pedidos por usuario
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
@@ -272,6 +325,16 @@ http://localhost:4200/
 Este proyecto fue desarrollado por **Johana Jazmín Saavedra Tafur** y **Daniel Julián Laiton Muñoz**, estudiantes de quinto semestre del programa **Tecnología en Desarrollo de Aplicaciones Web y Móviles** de la Fundación Universitaria Compensar.
 
 Como equipo, tuvimos una participación activa en el **diseño** e **implementación** de la aplicación web de comercio electrónico.
+
+[⬆️ Volver al índice](#-índice)
+
+---
+
+## 📜 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+
+[⬆️ Volver al índice](#-índice)
 
 ---
 
