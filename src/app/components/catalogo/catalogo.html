@@ -1,8 +1,7 @@
 <section class="catalogo">
 
   <div class="catalogo-header">
-    <div class="categorias-btn">
-      <button [class.activo]="categoriaActiva === 'todos'" (click)="filtrarCategoria('todos')">Todos</button>
+    <div class="categorias-btn">      
       <button [class.activo]="categoriaActiva === 'hombre'" (click)="filtrarCategoria('hombre')">Hombre</button>
       <button [class.activo]="categoriaActiva === 'mujer'" (click)="filtrarCategoria('mujer')">Mujer</button>
       <button [class.activo]="categoriaActiva === 'joyeria'" (click)="filtrarCategoria('joyeria')">Joyería</button>
@@ -18,7 +17,7 @@
         <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
         <div class="producto-info">
           <h3 class="producto-titulo">{{ producto.title }}</h3>
-          <p class="producto-descripcion">{{ producto.description }}</p>
+          <p class="producto-descripcion" [title]="producto.description">{{ producto.description }}</p>
           <div class="producto-footer">
             <span class="producto-precio">${{ producto.price | number }}</span>
             <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar</button>

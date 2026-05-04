@@ -8,14 +8,6 @@
     </div>
   </div>
 
-  <!-- CENTRO (solo escritorio) -->
-  <nav class="navbar-menu desktop-menu">
-    <a routerLink="/catalogo" (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
-    <a routerLink="/catalogo" (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
-    <a routerLink="/catalogo" (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
-    <a routerLink="/catalogo" (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
-  </nav>
-
   <!-- DERECHA -->
   <div class="navbar-right">
 
@@ -37,14 +29,19 @@
 
     <!-- Usuario escritorio -->
     <div class="navbar-user desktop-menu" *ngIf="usuario">
-      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username
-        }}</span>
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }} {{ usuario.firstName || usuario.username }}</span>
+      <button class="btn-volver" *ngIf="enCatalogo" (click)="volver()">Volver</button>
       <button (click)="logout()">Cerrar Sesión</button>
     </div>
 
     <div class="navbar-user desktop-menu" *ngIf="!usuario">
-      <a [routerLink]="enIniciarSesion ? '/home' : '/iniciar-sesion'">{{ enIniciarSesion ? 'Inicio' : 'Iniciar Sesión' }}</a>
-      <a routerLink="/registro">Registrarse</a>
+      <ng-container *ngIf="enCatalogo; else menuNormal">
+        <button (click)="logout()">Cerrar Sesión</button>
+      </ng-container>
+      <ng-template #menuNormal>
+        <a [routerLink]="enIniciarSesion ? '/home' : '/iniciar-sesion'">{{ enIniciarSesion ? 'Inicio' : 'Iniciar Sesión' }}</a>
+        <a routerLink="/registro">Registrarse</a>
+      </ng-template>
     </div>
 
   </div>
@@ -55,21 +52,21 @@
   <!-- MENÚ MÓVIL -->
   <div class="mobile-menu" *ngIf="menuAbierto">
 
-    <a (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
-    <a (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
-    <a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
-    <a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
+    <div *ngIf="usuario" class="mobile-user">
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }} {{ usuario.firstName || usuario.username }}</span>
+    </div>
 
     <a [routerLink]="enIniciarSesion ? '/home' : '/iniciar-sesion'" *ngIf="!usuario" class="btn-iniciar">{{ enIniciarSesion ? 'Inicio' : 'Iniciar Sesión' }}</a>
     <a routerLink="/registro" *ngIf="!usuario">Registrarse</a>
-    <a routerLink="/login" *ngIf="usuario">Cerrar Sesión</a>
 
+    <button *ngIf="usuario && enCatalogo" (click)="volver()" class="btn-volver">Volver</button>
 
-    <div *ngIf="usuario" class="mobile-user">
-      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username
-        }}</span>
-      <button (click)="logout()">Cerrar Sesión</button>
-    </div>
+    <!-- BOTÓN CARRITO EN MÓVIL - solo visible en catálogo -->
+    <button *ngIf="enCatalogo" (click)="abrirCarrito()" class="mobile-carrito-btn">
+       Mi Carrito <span *ngIf="totalItems > 0" class="mobile-carrito-badge">{{ totalItems }}</span>
+    </button>
+
+    <button *ngIf="usuario" (click)="logout()" class="mobile-logout">Cerrar Sesión</button>
 
     <div class="navbar-social">
       <a href="https://www.facebook.com/profile.php?id=61560576519217" target="_blank">

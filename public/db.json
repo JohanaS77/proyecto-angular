@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "title": "Argollas Plateadas Grandes",
+      "title": "Candongas Plateadas Grandes",
       "description": "Aretes modernos de acero inoxidable quirúrgico. Diseño clásico y atemporal para personalidades audaces.",
       "price": 40000,
       "category": "joyeria",
@@ -138,24 +138,24 @@
     },
     {
       "id": 18,
-      "title": "Blusa Básica Corte Elegante",
-      "description": "Blusa básica de corte elegante. Tela suave con excelente caída para un look sofisticado.",
+      "title": "Pantalón Palazzo Fluido Negro",
+      "description": "Pantalón palazzo de corte amplio con cintura elástica y cordón ajustable. Tela fluida con excelente caída para un look elegante y cómodo.",
       "price": 90000,
       "category": "mujer",
       "image": "imagenes/mujer/producto18.png"
     },
     {
       "id": 19,
-      "title": "Chaqueta Deportiva Running",
-      "description": "Chaqueta deportiva con tecnología anti-humedad. Perfecta para entrenamiento y actividades al aire libre.",
+      "title": "Tenis Skechers Degradado Multicolor",
+      "description": "Tenis urbanos con diseño degradado en tonos pastel. Suela con amortiguación Air-Cooled y estilo casual para el día a día.",
       "price": 380000,
       "category": "mujer",
       "image": "imagenes/mujer/producto19.png"
     },
     {
       "id": 20,
-      "title": "Camiseta Casual Algodón Premium",
-      "description": "Camiseta casual de algodón premium. Diseño moderno para un look relajado y cómodo.",
+      "title": "Bolso Tote Riviera Café Texturizado",
+      "description": "Bolso tote de cuero sintético con textura grabada y herrajes dorados. Amplio espacio interior con asas largas para uso diario y looks elegantes.",
       "price": 150000,
       "category": "mujer",
       "image": "imagenes/mujer/producto20.png"

@@ -1,6 +1,9 @@
 <section class="carrito-container" [class.visible]="carrito.visible()">
     <div class="carrito-header">
-      <h3>Mi Carrito</h3>
+      <div class="carrito-titulo">
+        <img src="/imagenes/logo.png" alt="Logo" style="height: 28px;">
+        <h3>Mi Carrito</h3>
+      </div>
       <button class="cerrar-btn" (click)="carrito.cerrarCarrito()">X</button>
     </div>
   
@@ -42,11 +45,10 @@
   @if (modalVisible()) {
     <div class="modal-overlay" (click)="cerrarModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
-        <img src="/imagenes/logo.png" alt="Logo" style="height: 80px; margin-bottom: 1rem;">
+        <img src="/imagenes/logo.png" alt="Logo" style="height: 60px; margin-bottom: 1rem; object-fit: contain;">
         <h3 class="mensaje-exito">¡Compra realizada con éxito!</h3>
         <p>Su pedido se encuentra en camino. Recibirá un correo de confirmación en breve.</p>
         <button class="btn-cerrar-modal" (click)="cerrarModal()">Aceptar</button>
       </div>
     </div>
   }
-  

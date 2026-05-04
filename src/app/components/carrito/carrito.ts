@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, inject, signal } from '@angular/core';
 import { CommonModule, DecimalPipe } from '@angular/common';
 import { CarritoService } from '../../services/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -13,6 +14,11 @@ import { CarritoService } from '../../services/carrito.service';
 export class CarritoComponent {
   public carrito = inject(CarritoService);
   public modalVisible = signal(false);
+  private router = inject(Router);
+
+  @HostBinding('class.visible-mobile') get visibleMobile() {
+    return this.carrito.visible();
+  }
 
   comprar(): void {
     if (this.carrito.items().length === 0) {
@@ -31,5 +37,6 @@ export class CarritoComponent {
 
   cerrarModal(): void {
     this.modalVisible.set(false);
+    this.router.navigate(['/bienvenida']);
   }
 }

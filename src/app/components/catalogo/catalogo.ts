@@ -16,7 +16,7 @@ import { CarritoComponent } from '../carrito/carrito';
 export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
-  categoriaActiva: string = 'todos';
+  categoriaActiva: string = 'hombre';
   cargando = true;
   carrito = inject(CarritoService);
 
@@ -25,26 +25,23 @@ export class CatalogoComponent implements OnInit {
   constructor(private productoService: ProductoService) {}
 
   ngOnInit() {
+    const categoriaGuardada = localStorage.getItem('categoriaInicial') || 'hombre';    
+      this.categoriaActiva = categoriaGuardada;
+      localStorage.removeItem('categoriaInicial');    
+
     this.productoService.getProductos().subscribe({
       next: (data) => {
         this.productos = data;
-        this.productosFiltrados = data;
+        this.productosFiltrados = categoriaGuardada
+          ? data.filter(p => p.category === categoriaGuardada)
+          : data;
         this.cargando = false;
       },
       error: () => {
         this.cargando = false;
       }
     });
-  }
-
-   ngAfterViewInit() {
-    const elementobotones = document.getElementsByClassName("navbar-user desktop-menu");
-
-    if (elementobotones.length > 0) {
-      elementobotones[0].innerHTML =
-        '<div class="navbar-user desktop-menu" *ngIf="!usuario"><a href="/iniciar-sesion">Cerrar Sesión</a>';
-    }
-  }
+  }  
 
   filtrarCategoria(categoria: string) {
     this.categoriaActiva = categoria;
