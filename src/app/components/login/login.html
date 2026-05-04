@@ -64,4 +64,15 @@
   <img src="/imagenes/mujer/producto18.png" class="floating img11">
   <img src="/imagenes/joyeria/producto10.png" class="floating img12">
 
+  <!-- MODAL -->
+  <div class="modal-overlay" *ngIf="mostrarModal">
+    <div class="modal-box">
+      <div class="modal-icon" [ngClass]="modalExito ? 'exito' : 'error'">
+        {{ modalExito ? '✓' : '✗' }}
+      </div>
+      <h3>{{ modalExito ? '¡Éxito!' : '¡Error!' }}</h3>
+      <p>{{ modalMensaje }}</p>
+      <button class="modal-btn" (click)="cerrarModal()">Aceptar</button>
+    </div>
+  </div>
 </div>

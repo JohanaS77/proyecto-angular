@@ -1,0 +1,38 @@
+<div class="iniciar-sesion-screen">
+  <div class="iniciar-sesion-container">
+    <h1>
+      <img src="/imagenes/logo.png" alt="Logo" style="height: 60px;">
+      QuickShop
+    </h1>
+    <p>Inicia sesión para comenzar a comprar</p>
+
+    <div class="form-group">
+      <label>Usuario</label>
+      <input type="text" placeholder="Usuario" [(ngModel)]="loginData.username">
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" placeholder="••••••••" [(ngModel)]="loginData.password">
+    </div>
+
+    <button class="iniciar-sesion-btn" (click)="iniciarSesion()">Iniciar Sesión</button>
+    <p class="text-danger mt-2" *ngIf="errorMsg">{{ errorMsg }}</p>
+    <div class="toggle-form">
+      <p>¿No tienes cuenta? <a routerLink="/registro">Regístrate aquí</a></p>
+    </div>
+  </div>
+
+  <img src="/imagenes/electronica/producto11.png" class="floating img1">
+  <img src="/imagenes/mujer/producto17.png" class="floating img2">
+  <img src="/imagenes/joyeria/producto7.png" class="floating img3">
+  <img src="/imagenes/hombre/producto1.png" class="floating img4">
+  <img src="/imagenes/electronica/producto13.png" class="floating img5">
+  <img src="/imagenes/mujer/producto19.png" class="floating img6">
+  <img src="/imagenes/joyeria/producto9.png" class="floating img7">
+  <img src="/imagenes/hombre/producto4.png" class="floating img8">
+  <img src="/imagenes/hombre/producto2.png" class="floating img9">
+  <img src="/imagenes/electronica/producto15.png" class="floating img10">
+  <img src="/imagenes/mujer/producto18.png" class="floating img11">
+  <img src="/imagenes/joyeria/producto10.png" class="floating img12">
+</div>

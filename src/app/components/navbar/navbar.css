@@ -108,6 +108,11 @@
 .navbar-social a:hover {
   transform: scale(1.2);
 }
+.tiktok-icon {
+  width: 31px !important;
+  height: 31px !important;
+  margin-left: -12px;
+}
 
 /* HAMBURGUESA */
 .menu-toggle {
@@ -169,6 +174,8 @@
   font-size: 0.9rem;
   font-weight: 500;
   transition: 0.2s;
+  width: 120px;
+  text-align: center;
 }
 
 /* Iniciar sesión (secundario) */
@@ -196,10 +203,13 @@
   font-weight: 500;
   transition: 0.2s;
   color: #333;
+  text-align: center;
+  width: 120px;
+  align-self: center;
 }
 
 /* Iniciar sesión (outline) */
-.mobile-menu a[href="/login"] {
+.mobile-menu .btn-iniciar {
   border: 1px solid #667eea;
   color: #667eea;
 }

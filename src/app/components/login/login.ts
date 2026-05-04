@@ -1,18 +1,23 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
-
 export class LoginComponent implements OnInit {
   modoRegistro = false;
   @Input() iniciarEnRegistro = false;
+  mostrarModal = false;
+  modalExito = false;
+  modalMensaje = '';
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     if (this.iniciarEnRegistro) {
@@ -49,18 +54,24 @@ export class LoginComponent implements OnInit {
   registrarUsuario() {
     this.errorMsg = '';
     if (this.registerData.password !== this.registerData.passwordConfirm) {
-      this.errorMsg = 'Las contraseñas no coinciden';
+      this.modalExito = false;
+      this.modalMensaje = 'Las contraseñas no coinciden';
+      this.mostrarModal = true;
       return;
     }
     if (this.registerData.password.length < 6) {
-      this.errorMsg = 'La contraseña debe tener al menos 6 caracteres';
+      this.modalExito = false;
+      this.modalMensaje = 'La contraseña debe tener al menos 6 caracteres';
+      this.mostrarModal = true;
       return;
     }
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
     const existe = usuarios.some((u: any) => u.username === this.registerData.username);
     if (existe) {
-      this.errorMsg = 'El nombre de usuario ya está en uso';
+      this.modalExito = false;
+      this.modalMensaje = 'El nombre de usuario ya está en uso';
+      this.mostrarModal = true;
       return;
     }
 
@@ -75,11 +86,15 @@ export class LoginComponent implements OnInit {
 
     usuarios.push(nuevoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    this.successMsg = '¡Registro exitoso! Ya puedes iniciar sesión';
+    this.modalExito = true;
+    this.modalMensaje = '¡Registro exitoso! Ya puedes iniciar sesión';
+    this.mostrarModal = true;
+  }
 
-    setTimeout(() => {
-      this.toggleFormulario();
-      this.successMsg = '';
-    }, 2000);
+  cerrarModal() {
+    this.mostrarModal = false;
+    if (this.modalExito) {
+      this.router.navigate(['/iniciar-sesion']);
+    }
   }
 }

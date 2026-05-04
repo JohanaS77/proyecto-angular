@@ -2,7 +2,7 @@
 
   <!-- IZQUIERDA -->
   <div class="navbar-left">
-    <div class="navbar-logo" routerLink="/" style="cursor: pointer;">
+    <div class="navbar-logo">
       <img src="/imagenes/logo.png" alt="Logo" class="logo">
       <span class="logo-text">QuickShop</span>
     </div>
@@ -21,17 +21,17 @@
 
     <!-- Redes (solo escritorio) -->
     <div class="navbar-social desktop-menu">
-      <a href="#" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61560576519217" target="_blank">
         <img src="/imagenes/redes/facebook.png" alt="Facebook">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.instagram.com/quickshop20262026/" target="_blank">
         <img src="/imagenes/redes/instagram.png" alt="Instagram">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61560576519217" target="_blank">
         <img src="/imagenes/redes/twiter.png" alt="X">
       </a>
-      <a href="#" target="_blank">
-        <img src="/imagenes/redes/tiktok.png" alt="TikTok">
+      <a href="https://www.instagram.com/quickshop20262026/" target="_blank">
+        <img src="/imagenes/redes/tiktok.png" alt="TikTok" class="tiktok-icon">
       </a>
     </div>
 
@@ -43,7 +43,7 @@
     </div>
 
     <div class="navbar-user desktop-menu" *ngIf="!usuario">
-      <a routerLink="/iniciar-sesion">Iniciar Sesión</a>
+      <a [routerLink]="enIniciarSesion ? '/home' : '/iniciar-sesion'">{{ enIniciarSesion ? 'Inicio' : 'Iniciar Sesión' }}</a>
       <a routerLink="/registro">Registrarse</a>
     </div>
 
@@ -60,7 +60,7 @@
     <a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
     <a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
 
-    <a routerLink="/login" *ngIf="!usuario">Iniciar Sesión</a>
+    <a [routerLink]="enIniciarSesion ? '/home' : '/iniciar-sesion'" *ngIf="!usuario" class="btn-iniciar">{{ enIniciarSesion ? 'Inicio' : 'Iniciar Sesión' }}</a>
     <a routerLink="/registro" *ngIf="!usuario">Registrarse</a>
     <a routerLink="/login" *ngIf="usuario">Cerrar Sesión</a>
 
@@ -72,17 +72,17 @@
     </div>
 
     <div class="navbar-social">
-      <a href="#" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61560576519217" target="_blank">
         <img src="/imagenes/redes/facebook.png" alt="Facebook">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.instagram.com/quickshop20262026/" target="_blank">
         <img src="/imagenes/redes/instagram.png" alt="Instagram">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61560576519217" target="_blank">
         <img src="/imagenes/redes/twiter.png" alt="X">
       </a>
-      <a href="#" target="_blank">
-        <img src="/imagenes/redes/tiktok.png" alt="TikTok">
+      <a href="https://www.instagram.com/quickshop20262026/" target="_blank">
+        <img src="/imagenes/redes/tiktok.png" alt="TikTok" class="tiktok-icon">
       </a>
     </div>
 

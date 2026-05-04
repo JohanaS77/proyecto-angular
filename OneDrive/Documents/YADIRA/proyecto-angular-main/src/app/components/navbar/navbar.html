@@ -1,0 +1,82 @@
+<header class="navbar">
+
+  <!-- IZQUIERDA -->
+  <div class="navbar-left">
+    <div class="navbar-logo">
+      <img src="/imagenes/logo.png" alt="Logo" class="logo">
+      <span class="logo-text">QuickShop</span>
+    </div>
+  </div>
+
+  <!-- CENTRO (solo escritorio) -->
+  <nav class="navbar-menu desktop-menu">
+    <a routerLink="/catalogo" (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
+  </nav>
+
+  <!-- DERECHA -->
+  <div class="navbar-right">
+
+    <!-- Redes (solo escritorio) -->
+    <div class="navbar-social desktop-menu">
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/facebook.png" alt="Facebook">
+      </a>
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/instagram.png" alt="Instagram">
+      </a>      
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/tiktok.png" alt="TikTok" class="tiktok-icon">
+      </a>
+    </div>
+
+    <!-- Usuario escritorio -->
+    <div class="navbar-user desktop-menu" *ngIf="usuario">
+  <span class="navbar-saludo">{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }} {{ usuario.firstName || usuario.username }}</span>
+  <a routerLink="/bienvenida" *ngIf="enPaginaCatalogo" class="btn-bienvenida">Tienda</a>
+  <button (click)="logout()">Cerrar Sesión</button>
+</div>
+
+    <div class="navbar-user desktop-menu" *ngIf="!usuario">
+      <a routerLink="/home" class="btn px-4" style="background: white; border: 2px solid #667eea; color: #667eea;">Inicio</a>
+      <a routerLink="/registro" class="btn" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;" *ngIf="!enPaginaRegistro">Registrarse</a>
+    </div>
+
+  </div>
+
+  <!-- BOTÓN HAMBURGUESA -->
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" *ngIf="menuAbierto">
+
+    <span *ngIf="usuario" style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }} {{ usuario.firstName || usuario.username }}</span>
+
+    <a (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
+    <a (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
+    <a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
+    <a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
+
+    <a routerLink="/home" *ngIf="!usuario" class="btn btn-outline-primary btn-sm">Inicio</a>
+    <a routerLink="/registro" *ngIf="!usuario && !enPaginaRegistro">Registrarse</a>
+
+    <a routerLink="/bienvenida" *ngIf="usuario && enPaginaCatalogo" class="btn-bienvenida">Tienda</a>
+    <a (click)="logout()" *ngIf="usuario" class="btn text-white text-center" style="background: linear-gradient(135deg, #667eea, #764ba2);">Cerrar Sesión</a>
+
+    <div class="navbar-social">
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/facebook.png" alt="Facebook">
+      </a>
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/instagram.png" alt="Instagram">
+      </a>      
+      <a href="#" target="_blank">
+        <img src="/imagenes/redes/tiktok.png" alt="TikTok" class="tiktok-icon">
+      </a>
+    </div>
+
+  </div>
+
+</header>

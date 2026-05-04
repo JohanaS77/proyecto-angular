@@ -26,6 +26,10 @@ export class NavbarComponent {
     });
   }
 
+  get enIniciarSesion(): boolean {
+    return this.router.url === '/iniciar-sesion';
+  }
+
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;
   }

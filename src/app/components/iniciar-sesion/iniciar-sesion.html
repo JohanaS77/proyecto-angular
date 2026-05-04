@@ -16,7 +16,9 @@
       <input type="password" placeholder="••••••••" [(ngModel)]="loginData.password">
     </div>
 
-    <button class="iniciar-sesion-btn" (click)="iniciarSesion() "><a routerLink="/catalogo">iniciar Sesion</a></button>
+    <p *ngIf="errorMsg" style="color: #4a0080; text-align: center; font-weight: 650; font-size: 1.1rem;">{{ errorMsg }}</p>
+
+    <button class="iniciar-sesion-btn" (click)="iniciarSesion()">Iniciar Sesión</button>
 
     <div class="toggle-form">
       <p>¿No tienes cuenta? <a routerLink="/registro">Regístrate aquí</a></p>
