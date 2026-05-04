@@ -31,9 +31,9 @@
 
 ## 📖 Descripción
 
-QuickShop Angular es una aplicación web de comercio electrónico moderna y responsive que simula una tienda virtual completa. Permite a los usuarios explorar un catálogo de productos organizado por categorías, gestionar un carrito de compras persistente y autenticarse en la plataforma.
+QuickShop es una aplicación web de comercio electrónico moderna y responsive que simula una tienda virtual completa. Permite a los usuarios explorar un catálogo de productos organizado por categorías, gestionar un carrito de compras persistente y autenticarse en la plataforma.
 
-El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Software Web Front-End** del programa de formación del SENA, aplicando los fundamentos de Angular y Bootstrap vistos durante el curso. Se utilizaron las características más modernas de Angular 21, incluyendo componentes standalone, Signals para el manejo de estado reactivo y una arquitectura limpia orientada a la escalabilidad.
+El proyecto fue desarrollado en el marco de la asignatura **Desarrollo de Software Web Front-End** del programa **Tecnología en Desarrollo de Aplicaciones Web y Móviles** de la Fundación Universitaria Compensar, aplicando los fundamentos de Angular y Bootstrap vistos durante el curso. Se utilizaron las características más modernas de Angular 21, incluyendo componentes standalone, Signals para el manejo de estado reactivo y una arquitectura limpia orientada a la escalabilidad.
 
 [⬆️ Volver al índice](#-índice)
 
