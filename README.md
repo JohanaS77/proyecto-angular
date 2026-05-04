@@ -24,7 +24,7 @@
 - [Installation and Usage](#️-installation-and-usage)
 - [Key Technical Features](#-key-technical-features)
 - [Future Improvements](#-future-improvements)
-- [Developers](#-developers)
+- [Developers](#developers)
 - [License](#-license)
 
 ---
@@ -301,6 +301,7 @@ http://localhost:4200/
 
 ---
 
+<a id="developers"></a>
 ## 👩‍💻 Developers
 
 <div align="center">
