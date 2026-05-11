@@ -3,6 +3,10 @@ export interface Producto {
   title: string;
   description: string;
   price: number;
-  image: string;
   category: string;
+  image: string;
+  tallas: string[];
+  colores: string[];
+  stock: number;
+  imagenes: string[];
 }

@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion';
 import { CatalogoComponent } from './components/catalogo/catalogo';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida';
+import { ProductoDetailComponent } from './components/producto-detail/producto-detail';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'catalogo', component: CatalogoComponent },
   { path: 'bienvenida', component: BienvenidaComponent },
+  { path: 'producto/:id', component: ProductoDetailComponent },
 ];
