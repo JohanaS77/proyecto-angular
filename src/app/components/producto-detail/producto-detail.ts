@@ -19,6 +19,7 @@ export class ProductoDetailComponent implements OnInit {
   tallaSeleccionada: string = '';
   colorSeleccionado: string = '';
   cargando = true;
+  agregado = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -60,11 +61,15 @@ export class ProductoDetailComponent implements OnInit {
   agregarAlCarrito() {
     if (this.producto) {
       this.carritoService.agregarAlCarrito(this.producto);
-      this.carritoService.abrirCarrito();
+      this.agregado = true;
+      setTimeout(() => this.agregado = false, 2500);
     }
   }
 
   volver() {
+    if (this.producto) {
+      localStorage.setItem('categoriaInicial', this.producto.category);
+    }
     this.router.navigate(['/catalogo']);
   }
 }

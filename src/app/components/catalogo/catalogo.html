@@ -14,7 +14,7 @@
   <div *ngIf="!cargando" class="catalogo-contenido">
     <div class="productos-grid">
       <div class="producto-card" *ngFor="let producto of productosFiltrados">
-        <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
+        <img [src]="producto.image" [alt]="producto.title" class="producto-imagen" (click)="verDetalle(producto)" style="cursor: pointer;">
         <div class="producto-info">
           <h3 class="producto-titulo">{{ producto.title }}</h3>
           <p class="producto-descripcion" [title]="producto.description">{{ producto.description }}</p>

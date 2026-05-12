@@ -1,6 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductoService, Producto } from '../../services/producto.service';
+import { Router } from '@angular/router';
+import { ProductoService } from '../../services/producto.service';
+import { Producto } from '../../models/producto.model';
 import { CarritoService } from '../../services/carrito.service';
 import { CarritoComponent } from '../carrito/carrito';
 
@@ -9,7 +11,6 @@ import { CarritoComponent } from '../carrito/carrito';
   standalone: true,
   imports: [CommonModule, CarritoComponent],
   templateUrl: './catalogo.html',
- 
   styleUrl: './catalogo.css'
 })
 
@@ -20,14 +21,15 @@ export class CatalogoComponent implements OnInit {
   cargando = true;
   carrito = inject(CarritoService);
 
-
-
-  constructor(private productoService: ProductoService) {}
+  constructor(
+    private productoService: ProductoService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    const categoriaGuardada = localStorage.getItem('categoriaInicial') || 'hombre';    
-      this.categoriaActiva = categoriaGuardada;
-      localStorage.removeItem('categoriaInicial');    
+    const categoriaGuardada = localStorage.getItem('categoriaInicial') || 'hombre';
+    this.categoriaActiva = categoriaGuardada;
+    localStorage.removeItem('categoriaInicial');
 
     this.productoService.getProductos().subscribe({
       next: (data) => {
@@ -41,7 +43,7 @@ export class CatalogoComponent implements OnInit {
         this.cargando = false;
       }
     });
-  }  
+  }
 
   filtrarCategoria(categoria: string) {
     this.categoriaActiva = categoria;
@@ -50,6 +52,10 @@ export class CatalogoComponent implements OnInit {
     } else {
       this.productosFiltrados = this.productos.filter(p => p.category === categoria);
     }
+  }
+
+  verDetalle(producto: Producto) {
+    this.router.navigate(['/producto', producto.id]);
   }
 
   agregarAlCarrito(producto: Producto) {

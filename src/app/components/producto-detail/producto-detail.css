@@ -1,0 +1,168 @@
+.detalle-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.btn-volver {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.btn-volver:hover {
+  color: #000;
+}
+
+.detalle-contenido {
+  display: flex;
+  gap: 40px;
+}
+
+.detalle-imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.imagen-principal {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  max-height: 300px;
+  background: #f5f5f5;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+}
+
+.miniatura {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.miniatura.activa {
+  border-color: #333;
+}
+
+.detalle-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detalle-categoria {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+
+.detalle-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.detalle-descripcion {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+
+.detalle-precio {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.detalle-tallas p,
+.detalle-colores p {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.opciones button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  color: #667eea;
+  font-size: 13px;
+}
+
+.opciones button.seleccionado {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+}
+
+.detalle-stock {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.btn-carrito {
+  padding: 8px 42px;
+  width: fit-content;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-carrito:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  color: white;
+  border-color: transparent;
+}
+
+.cargando, .no-encontrado {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: #999;
+}
+.mensaje-agregado {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

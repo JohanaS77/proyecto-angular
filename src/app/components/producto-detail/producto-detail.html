@@ -1,1 +1,52 @@
-<p>producto-detail works!</p>
+<div class="detalle-container" *ngIf="producto && !cargando">
+
+  <button class="btn-volver" (click)="volver()">← Volver al catálogo</button>
+
+  <div class="detalle-contenido">
+
+    <div class="detalle-imagenes">
+      <img [src]="imagenActiva" [alt]="producto.title" class="imagen-principal">
+      <div class="miniaturas">
+        <img *ngFor="let img of producto.imagenes"
+             [src]="img"
+             [class.activa]="img === imagenActiva"
+             (click)="cambiarImagen(img)"
+             class="miniatura">
+      </div>
+      <button class="btn-carrito" (click)="agregarAlCarrito()">Agregar al Carrito</button>
+      <p class="mensaje-agregado" *ngIf="agregado">✔ ¡Producto agregado al Carrito!</p>
+    </div>
+
+    <div class="detalle-info">
+      <p class="detalle-categoria">{{ producto.category | uppercase }}</p>
+      <h1 class="detalle-titulo">{{ producto.title }}</h1>
+      <p class="detalle-descripcion">{{ producto.description }}</p>
+      <p class="detalle-precio">${{ producto.price | number }}</p>
+
+      <div class="detalle-tallas">
+        <p>Talla:</p>
+        <div class="opciones">
+          <button *ngFor="let talla of producto.tallas"
+                  [class.seleccionado]="talla === tallaSeleccionada"
+                  (click)="seleccionarTalla(talla)">{{ talla }}</button>
+        </div>
+      </div>
+
+      <div class="detalle-colores">
+        <p>Color:</p>
+        <div class="opciones">
+          <button *ngFor="let color of producto.colores"
+                  [class.seleccionado]="color === colorSeleccionado"
+                  (click)="seleccionarColor(color)">{{ color }}</button>
+        </div>
+      </div>
+
+      <p class="detalle-stock">Stock disponible: {{ producto.stock }} unidades</p>      
+    </div>
+
+  </div>
+
+</div>
+
+<div *ngIf="cargando" class="cargando">Cargando producto...</div>
+<div *ngIf="!cargando && !producto" class="no-encontrado">Producto no encontrado.</div>
