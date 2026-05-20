@@ -60,7 +60,8 @@ export class ProductoDetailComponent implements OnInit {
 
   agregarAlCarrito() {
     if (this.producto) {
-      this.carritoService.agregarAlCarrito(this.producto);
+      const productoConImagen = { ...this.producto, image: this.imagenActiva };
+      this.carritoService.agregarAlCarrito(productoConImagen);
       this.agregado = true;
       setTimeout(() => this.agregado = false, 2500);
     }
