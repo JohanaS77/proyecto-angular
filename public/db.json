@@ -7,13 +7,13 @@
       "price": 50000,
       "category": "hombre",
       "tallas": ["S", "M", "L", "XL"],
-      "colores": ["Negro", "Blanco", "Gris"],
+      "colores": ["Gris", "Azul", "Negro"],
       "stock": 15,
       "image": "imagenes/hombre/producto1.png",
       "imagenes": [
         "imagenes/hombre/producto1.png",
-        "imagenes/hombre/producto1.png",
-        "imagenes/hombre/producto1.png"
+        "imagenes/hombre/producto1a.png",
+        "imagenes/hombre/producto1b.png"        
       ]
     },
     {
@@ -23,13 +23,13 @@
       "price": 80000,
       "category": "hombre",
       "tallas": ["Única"],
-      "colores": ["Verde Oliva", "Negro", "Azul"],
+      "colores": ["Azul", "Negro", "Verde Oliva"],
       "stock": 10,
       "image": "imagenes/hombre/producto2.png",
       "imagenes": [
         "imagenes/hombre/producto2.png",
-        "imagenes/hombre/producto2.png",
-        "imagenes/hombre/producto2.png"
+        "imagenes/hombre/producto2a.png",
+        "imagenes/hombre/producto2b.png"        
       ]
     },
     {
@@ -39,13 +39,13 @@
       "price": 120000,
       "category": "hombre",
       "tallas": ["S", "M", "L", "XL", "XXL"],
-      "colores": ["Café", "Negro", "Beige"],
+      "colores": ["Beige", "Negro", "Café"],
       "stock": 8,
       "image": "imagenes/hombre/producto3.png",
       "imagenes": [
         "imagenes/hombre/producto3.png",
-        "imagenes/hombre/producto3.png",
-        "imagenes/hombre/producto3.png"
+        "imagenes/hombre/producto3a.png",
+        "imagenes/hombre/producto3b.png"
       ]
     },
     {
@@ -60,8 +60,8 @@
       "image": "imagenes/hombre/producto4.png",
       "imagenes": [
         "imagenes/hombre/producto4.png",
-        "imagenes/hombre/producto4.png",
-        "imagenes/hombre/producto4.png"
+        "imagenes/hombre/producto4b.png",
+        "imagenes/hombre/producto4a.png"
       ]
     },
     {
@@ -76,8 +76,8 @@
       "image": "imagenes/hombre/producto5.png",
       "imagenes": [
         "imagenes/hombre/producto5.png",
-        "imagenes/hombre/producto5.png",
-        "imagenes/hombre/producto5.png"
+        "imagenes/hombre/producto5b.png",
+        "imagenes/hombre/producto5a.png"
       ]
     },
     {
@@ -92,14 +92,13 @@
       "image": "imagenes/joyeria/producto6.png",
       "imagenes": [
         "imagenes/joyeria/producto6.png",
-        "imagenes/joyeria/producto6.png",
-        "imagenes/joyeria/producto6.png"
+        "imagenes/joyeria/producto6a.png"        
       ]
     },
     {
       "id": 7,
       "title": "Aros Acero",
-      "description": "Aros lisos en acero inoxidable bañado en oro rosa. Elegantes y resistentes para uso diario.",
+      "description": "Aros lisos en acero inoxidable bañado en oro. Elegantes y resistentes para uso diario.",
       "price": 85000,
       "category": "joyeria",
       "tallas": ["Única"],
@@ -108,13 +107,13 @@
       "image": "imagenes/joyeria/producto7.png",
       "imagenes": [
         "imagenes/joyeria/producto7.png",
-        "imagenes/joyeria/producto7.png",
-        "imagenes/joyeria/producto7.png"
+        "imagenes/joyeria/producto7a.png",
+        "imagenes/joyeria/producto7b.png"
       ]
     },
     {
       "id": 8,
-      "title": "Candongas Plateadas Grandes",
+      "title": "Candongas Grandes",
       "description": "Aretes modernos de acero inoxidable quirúrgico. Diseño clásico y atemporal para personalidades audaces.",
       "price": 40000,
       "category": "joyeria",
@@ -124,8 +123,7 @@
       "image": "imagenes/joyeria/producto8.png",
       "imagenes": [
         "imagenes/joyeria/producto8.png",
-        "imagenes/joyeria/producto8.png",
-        "imagenes/joyeria/producto8.png"
+        "imagenes/joyeria/producto8a.png"        
       ]
     },
     {
@@ -140,13 +138,13 @@
       "image": "imagenes/joyeria/producto9.png",
       "imagenes": [
         "imagenes/joyeria/producto9.png",
-        "imagenes/joyeria/producto9.png",
-        "imagenes/joyeria/producto9.png"
+        "imagenes/joyeria/producto9a.png",
+        "imagenes/joyeria/producto9b.png"
       ]
     },
     {
       "id": 10,
-      "title": "Brazalete Dragón en Plata",
+      "title": "Brazalete Dragón",
       "description": "Elegante brazalete inspirado en la mitología oriental. Pieza única que combina tradición y lujo.",
       "price": 150000,
       "category": "joyeria",
@@ -156,8 +154,9 @@
       "image": "imagenes/joyeria/producto10.png",
       "imagenes": [
         "imagenes/joyeria/producto10.png",
-        "imagenes/joyeria/producto10.png",
-        "imagenes/joyeria/producto10.png"
+        "imagenes/joyeria/producto10a.png",
+        "imagenes/joyeria/producto10b.png",
+        "imagenes/joyeria/producto10c.png"
       ]
     },
     {
@@ -172,8 +171,8 @@
       "image": "imagenes/electronica/producto11.png",
       "imagenes": [
         "imagenes/electronica/producto11.png",
-        "imagenes/electronica/producto11.png",
-        "imagenes/electronica/producto11.png"
+        "imagenes/electronica/producto11a.png",
+        "imagenes/electronica/producto11b.png"
       ]
     },
     {
@@ -183,13 +182,13 @@
       "price": 105000,
       "category": "electronica",
       "tallas": ["Única"],
-      "colores": ["Negro", "Azul"],
+      "colores": ["Negro", "Gris", "Azul"],
       "stock": 9,
       "image": "imagenes/electronica/producto12.png",
       "imagenes": [
         "imagenes/electronica/producto12.png",
-        "imagenes/electronica/producto12.png",
-        "imagenes/electronica/producto12.png"
+        "imagenes/electronica/producto12a.png",
+        "imagenes/electronica/producto12b.png"
       ]
     },
     {
@@ -204,8 +203,7 @@
       "image": "imagenes/electronica/producto13.png",
       "imagenes": [
         "imagenes/electronica/producto13.png",
-        "imagenes/electronica/producto13.png",
-        "imagenes/electronica/producto13.png"
+        "imagenes/electronica/producto13a.png"        
       ]
     },
     {
@@ -219,9 +217,8 @@
       "stock": 6,
       "image": "imagenes/electronica/producto14.png",
       "imagenes": [
-        "imagenes/electronica/producto14.png",
-        "imagenes/electronica/producto14.png",
-        "imagenes/electronica/producto14.png"
+        "imagenes/electronica/producto14.png",        
+        "imagenes/electronica/producto14a.png"
       ]
     },
     {
@@ -236,8 +233,7 @@
       "image": "imagenes/electronica/producto15.png",
       "imagenes": [
         "imagenes/electronica/producto15.png",
-        "imagenes/electronica/producto15.png",
-        "imagenes/electronica/producto15.png"
+        "imagenes/electronica/producto15a.png"        
       ]
     },
     {
@@ -247,13 +243,13 @@
       "price": 125000,
       "category": "mujer",
       "tallas": ["XS", "S", "M", "L", "XL"],
-      "colores": ["Rojo", "Negro", "Azul"],
+      "colores": ["Morado", "Rojo", "Azul"],
       "stock": 9,
       "image": "imagenes/mujer/producto16.png",
       "imagenes": [
         "imagenes/mujer/producto16.png",
-        "imagenes/mujer/producto16.png",
-        "imagenes/mujer/producto16.png"
+        "imagenes/mujer/producto16a.png",
+        "imagenes/mujer/producto16b.png"        
       ]
     },
     {
@@ -263,18 +259,18 @@
       "price": 85000,
       "category": "mujer",
       "tallas": ["XS", "S", "M", "L"],
-      "colores": ["Blanco", "Negro", "Azul"],
+      "colores": ["Rojo", "Negro", "Blanco"],
       "stock": 14,
       "image": "imagenes/mujer/producto17.png",
       "imagenes": [
         "imagenes/mujer/producto17.png",
-        "imagenes/mujer/producto17.png",
-        "imagenes/mujer/producto17.png"
+        "imagenes/mujer/producto17a.png",
+        "imagenes/mujer/producto17b.png"
       ]
     },
     {
       "id": 18,
-      "title": "Pantalón Palazzo Fluido Negro",
+      "title": "Pantalón Palazzo Fluido",
       "description": "Pantalón palazzo de corte amplio con cintura elástica y cordón ajustable. Tela fluida con excelente caída para un look elegante y cómodo.",
       "price": 90000,
       "category": "mujer",
@@ -284,8 +280,8 @@
       "image": "imagenes/mujer/producto18.png",
       "imagenes": [
         "imagenes/mujer/producto18.png",
-        "imagenes/mujer/producto18.png",
-        "imagenes/mujer/producto18.png"
+        "imagenes/mujer/producto18a.png",
+        "imagenes/mujer/producto18b.png"
       ]
     },
     {
@@ -300,13 +296,13 @@
       "image": "imagenes/mujer/producto19.png",
       "imagenes": [
         "imagenes/mujer/producto19.png",
-        "imagenes/mujer/producto19.png",
-        "imagenes/mujer/producto19.png"
+        "imagenes/mujer/producto19a.png",
+        "imagenes/mujer/producto19b.png"
       ]
     },
     {
       "id": 20,
-      "title": "Bolso Tote Riviera Café Texturizado",
+      "title": "Bolso Tote Riviera Texturizado",
       "description": "Bolso tote de cuero sintético con textura grabada y herrajes dorados. Amplio espacio interior con asas largas para uso diario y looks elegantes.",
       "price": 150000,
       "category": "mujer",
@@ -316,8 +312,8 @@
       "image": "imagenes/mujer/producto20.png",
       "imagenes": [
         "imagenes/mujer/producto20.png",
-        "imagenes/mujer/producto20.png",
-        "imagenes/mujer/producto20.png"
+        "imagenes/mujer/producto20b.png",
+        "imagenes/mujer/producto20a.png"
       ]
     }
   ]
